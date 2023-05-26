@@ -7,6 +7,11 @@ const app = express();
  * const publicPath = path.resolve(__dirname. './public');
  * app.use( express.static(publicPath) );
  */
+/**bootstrap */
+app.use("/css",express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")))
+
+app.use("/js",express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")))
+/**bootstrap  */
 
 app.use(express.static(path.join(__dirname, '/public'))); //setear la carpeta de archivos publicos
 
